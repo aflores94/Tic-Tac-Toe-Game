@@ -43,29 +43,17 @@ init();
 
 /*
 // Finds winner
-function checkCol(colIdx) {
-    let winner = null;
-    for (let rowIdx = 0; rowIdx < board[colIdx].length; rowIdx++) {
-        winner = checkUp(colIdx, rowIdx) || checkRight(colIdx, rowIdx) || checkDiag(colIdx, rowIdx, 1) || checkDiag(colIdx, rowIdx, -1);
-        if (winner) break;
-    }
-    return winner;
+function findWinner {
+   for (var i = 0; i < cells.length; i++) {
+iterate through cells looking for matches
 }
-
-function checkUp(colIdx, rowIdx) {
-    if (rowIdx > 2) return null;
-    const colArr = board[colIdx];
-    return (Math.abs(colArr[rowIdx] + colArr[rowIdx + 1] + colArr[rowIdx + 2] + colArr[rowIdx + 3]) === 4) ? colArr[rowIdx] : null;
+if (match) {
+    return winner
+} else if (board full and no match) {
+    return T
+} else if (board not full and no match) {
+   render()
 }
-
-function checkRight(colIdx, rowIdx) {
-    if (colIdx > 3) return null;
-    return (Math.abs(board[colIdx][rowIdx] + board[colIdx + 1][rowIdx] + board[colIdx + 2][rowIdx] + board[colIdx + 3][rowIdx]) === 4) ? board[colIdx][rowIdx] : null;
-}
-
-function checkDiag(colIdx, rowIdx, vertOffset) {
-    if (colIdx > 3 || (vertOffset > 0 && rowIdx > 2) || (vertOffset < 0 && rowIdx < 3)) return null;
-    return (Math.abs(board[colIdx][rowIdx] + board[colIdx + 1][rowIdx + vertOffset] + board[colIdx + 2][rowIdx + (vertOffset * 2)] + board[colIdx + 3][rowIdx + (vertOffset * 3)]) === 4) ? board[colIdx][rowIdx] : null;
 }
 */
 
