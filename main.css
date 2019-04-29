@@ -37,6 +37,14 @@ section div {
     border: 3px solid black;
 }
 
+button {
+    font-family: 'Play', sans-serif;
+    color: white;
+    background-color: red; 
+    border-radius: 50%; 
+    border: 3px solid black;
+}
+
 .puppy {
     background-image: url('images/puppy.png');
     background-size: cover;

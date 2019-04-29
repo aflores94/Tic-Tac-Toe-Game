@@ -11,16 +11,7 @@ const pickDog = document.getElementById('puppy-intro')
 
 const pickCat = document.getElementById('kitten-intro')
 
-const winCombos = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [6, 4, 2],
-]
+const button = document.getElementById('reset')
 
 /*----- app's state (variables) -----*/
 var board, winner, turn;
@@ -37,25 +28,23 @@ pickDog.addEventListener('click', startGame1)
 
 pickCat.addEventListener('click', startGame2)
 
+button.addEventListener('click', reset)
 
 /*----- functions -----*/
 init();
 
-/*
+function reset() { 
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].classList.remove("kitten", "puppy")
+    }
+    msgEl.innerHTML = "Play Game!"
+    pickDog.addEventListener('click', startGame1)
+    pickCat.addEventListener('click', startGame2)
+
+}
+
 // Finds winner
-function findWinner {
-   for (var i = 0; i < cells.length; i++) {
-iterate through cells looking for matches
-}
-if (match) {
-    return winner
-} else if (board full and no match) {
-    return T
-} else if (board not full and no match) {
-   render()
-}
-}
-*/
+
 
 //Controls board click and swtiches turn
 function handleClick(evt) {
@@ -67,9 +56,8 @@ function handleClick(evt) {
         return
     }
     turn *= -1;
-    render()
+    render();
 }
-
 
 //Picks player 
 function startGame1() {
